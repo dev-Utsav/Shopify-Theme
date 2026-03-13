@@ -248,12 +248,10 @@
       <!-- IMAGE -->
       {% if block.settings.menu_image != blank %}
       <div class="mega-image">
-
         <img
           src="{{ block.settings.menu_image | image_url: width: 500 }}"
           alt="{{ block.settings.menu_title }}"
           loading="lazy">
-
       </div>
       {% endif %}
 
@@ -264,13 +262,11 @@
       {% assign product = block.settings.menu_product %}
 
       <div class="mega-product">
-
         <a href="{{ product.url }}">
           <img
             src="{{ product.featured_image | image_url: width: 300 }}"
             alt="{{ product.title }}">
         </a>
-
         <h4>{{ product.title }}</h4>
 
         <span class="price">
