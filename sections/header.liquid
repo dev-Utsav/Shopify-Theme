@@ -555,37 +555,111 @@
   </script>
 {%- endif -%}
 <style>
-  .custom-mega-menu{
+.custom-mega-menu{
+  background:#fff;
   width:100%;
+  border-top:1px solid #eee;
 }
 
 .mega-menu-wrapper{
   display:flex;
-  gap:30px;
+  gap:40px;
 }
 
 .mega-menu-block{
-  width:25%;
+  flex:1;
 }
 
 .mega-menu-title{
   font-size:18px;
-  margin-bottom:10px;
+  font-weight:600;
+  margin-bottom:15px;
 }
 
-.mega-menu-links{
+.mega-menu-grid{
+  display:grid;
+  grid-template-columns: 1fr 200px 200px;
+  gap:25px;
+}
+
+/* LINKS */
+
+.mega-menu-links ul{
   list-style:none;
   padding:0;
+  margin:0;
 }
 
 .mega-menu-links li{
+  margin-bottom:10px;
+}
+
+.mega-menu-links a{
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+
+.mega-menu-links a:hover{
+  color:#000;
+}
+
+/* SUBMENU */
+
+.mega-submenu{
+  padding-left:15px;
+  margin-top:6px;
+}
+
+.mega-submenu li{
   margin-bottom:6px;
 }
 
+.mega-submenu a{
+  font-size:13px;
+  color:#777;
+}
+
+/* IMAGE */
+
 .mega-menu-image img{
   width:100%;
-  height:auto;
-  margin-top:10px;
+  border-radius:6px;
+}
+
+/* PRODUCT */
+
+.mega-menu-product{
+  text-align:center;
+}
+
+.mega-menu-product img{
+  width:100%;
+  margin-bottom:10px;
+}
+
+.mega-menu-product h4{
+  font-size:14px;
+  margin:5px 0;
+}
+
+.mega-menu-product .price{
+  display:block;
+  margin-bottom:8px;
+  font-weight:600;
+}
+
+.mega-product-btn{
+  background:#000;
+  color:#fff;
+  padding:8px 14px;
+  font-size:13px;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.mega-product-btn:hover{
+  background:#333;
 }
 </style>
 
