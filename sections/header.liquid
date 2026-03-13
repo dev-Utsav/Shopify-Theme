@@ -560,135 +560,78 @@
   </script>
 {%- endif -%}
 <style>
-/* Parent menu item */
+.custom-mega-nav{
+  display:flex;
+  gap:30px;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
 .mega-parent{
   position:relative;
 }
 
-/* Mega menu container */
+.mega-parent-link{
+  text-decoration:none;
+  font-weight:600;
+  color:#000;
+}
+
+/* MEGA MENU */
+
 .custom-mega-menu{
   position:absolute;
   left:0;
   top:100%;
   width:100%;
-  background:#ffffff;
-  padding:40px 30px;
+  background:#fff;
+  padding:40px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  z-index:99;
 
   opacity:0;
   visibility:hidden;
   transform:translateY(20px);
-  transition:all .3s ease;
+  transition:0.3s;
 }
 
-/* Show on hover */
 .mega-parent:hover .custom-mega-menu{
   opacity:1;
   visibility:visible;
   transform:translateY(0);
 }
 
-/* Wrapper */
-.mega-menu-wrapper{
-  display:flex;
-  gap:40px;
-}
-
-/* Menu block */
-.mega-menu-block{
-  flex:1;
-}
-
-/* Title */
-.mega-menu-title{
-  font-size:18px;
-  font-weight:600;
-  margin-bottom:15px;
-}
-
-/* Grid layout */
 .mega-menu-grid{
   display:grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 1fr 250px 250px;
   gap:30px;
-  align-items:start;
 }
 
-/* Menu links */
+/* LINKS */
+
 .mega-menu-links ul{
   list-style:none;
   padding:0;
-  margin:0;
 }
 
 .mega-menu-links li{
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
-.mega-menu-links a{
-  text-decoration:none;
-  font-size:14px;
-  color:#333;
-}
-
-.mega-menu-links a:hover{
-  color:#000;
-}
-
-/* Submenu */
 .mega-submenu{
-  margin-top:6px;
-  padding-left:12px;
+  padding-left:15px;
 }
 
-.mega-submenu li{
-  margin-bottom:6px;
-}
+/* IMAGE */
 
-.mega-submenu a{
-  font-size:13px;
-  color:#777;
-}
-
-/* Image */
 .mega-menu-image img{
   width:100%;
-  border-radius:6px;
 }
 
-/* Product */
-.mega-menu-product{
-  text-align:center;
-}
+/* PRODUCT */
 
 .mega-menu-product img{
   width:100%;
-  margin-bottom:10px;
-}
-
-.mega-menu-product h4{
-  font-size:14px;
-  margin:5px 0;
-}
-
-.mega-menu-product .price{
-  display:block;
-  margin-bottom:8px;
-  font-weight:600;
-}
-
-.mega-product-btn{
-  background:#000;
-  color:#fff;
-  padding:8px 14px;
-  font-size:13px;
-  text-decoration:none;
-  display:inline-block;
-}
-
-.mega-product-btn:hover{
-  background:#333;
 }
 </style>
 
