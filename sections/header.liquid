@@ -194,53 +194,81 @@
         endif
       endif
     %}  
-    <ul class="custom-mega-nav">
+   <ul class="custom-mega-nav">
 
 {% for block in section.blocks %}
 {% assign menu = linklists[block.settings.select_menu] %}
 
 <li class="mega-parent" {{ block.shopify_attributes }}>
 
+  <!-- Parent Menu Title -->
   <a class="mega-parent-link">
     {{ block.settings.menu_title }}
   </a>
 
+  <!-- Mega Menu Dropdown -->
   <div class="custom-mega-menu">
 
     <div class="mega-container">
 
-      <!-- LEFT LINKS -->
+      <!-- MENU LINKS -->
       <div class="mega-links">
 
         {% if menu.links != blank %}
         <ul>
+
           {% for link in menu.links %}
           <li>
+
             <a href="{{ link.url }}">{{ link.title }}</a>
+
+            {% if link.links != blank and block.settings.show_child %}
+            <ul class="mega-submenu">
+
+              {% for childlink in link.links %}
+              <li>
+                <a href="{{ childlink.url }}">
+                  {{ childlink.title }}
+                </a>
+              </li>
+              {% endfor %}
+
+            </ul>
+            {% endif %}
+
           </li>
           {% endfor %}
+
         </ul>
         {% endif %}
 
       </div>
 
+
       <!-- IMAGE -->
       {% if block.settings.menu_image != blank %}
       <div class="mega-image">
+
         <img
           src="{{ block.settings.menu_image | image_url: width: 500 }}"
-          alt="{{ block.settings.menu_title }}">
+          alt="{{ block.settings.menu_title }}"
+          loading="lazy">
+
       </div>
       {% endif %}
 
+
       <!-- PRODUCT -->
       {% if block.settings.menu_product != blank %}
-      {% assign product = all_products[block.settings.menu_product] %}
+
+      {% assign product = block.settings.menu_product %}
 
       <div class="mega-product">
 
         <a href="{{ product.url }}">
-          <img src="{{ product.featured_image | image_url: width: 300 }}">
+          <img
+            src="{{ product.featured_image | image_url: width: 300 }}"
+            alt="{{ product.title }}">
         </a>
 
         <h4>{{ product.title }}</h4>
