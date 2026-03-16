@@ -45,36 +45,15 @@
             "menu_title": "Collection",
             "text_color": "#000000",
             "menu_image": "shopify://shop_images/generated-1768199858013.png",
+            "title_text": "",
+            "link_url": "",
             "menu_product": "adidas-superstar-80s",
             "show_child": true
-          }
-        },
-        "mega_menu_images_Wrr8bg": {
-          "type": "mega_menu_images",
-          "settings": {
-            "menu_trigger": "Collection",
-            "link_1": "",
-            "link_2": "",
-            "link_3": ""
-          }
-        },
-        "mega_menu_images_dJq4WJ": {
-          "type": "mega_menu_images",
-          "settings": {
-            "menu_trigger": "Home",
-            "image_1": "shopify://shop_images/any-landscape-image-of-a-perfume-bottle-with-scenery.png",
-            "link_1": "shopify://products/the-collection-snowboard-hydrogen",
-            "image_2": "shopify://shop_images/any-landscape-image-of-a-perfume-bottle-with-scenery.png",
-            "link_2": "shopify://products/the-collection-snowboard-oxygen",
-            "image_3": "shopify://shop_images/any-landscape-image-of-a-perfume-bottle-with-scenery.png",
-            "link_3": "shopify://products/the-3p-fulfilled-snowboard"
           }
         }
       },
       "block_order": [
-        "custom_mega_menu_jwhYXA",
-        "mega_menu_images_Wrr8bg",
-        "mega_menu_images_dJq4WJ"
+        "custom_mega_menu_jwhYXA"
       ],
       "settings": {
         "logo_position": "middle-left",
