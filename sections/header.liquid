@@ -254,6 +254,12 @@
           loading="lazy">
       </div>
       {% endif %}
+         
+        {% if block.settings.title_text != blank %}
+      <div class="promot-menu-title">
+        {{ block.settings.title_text }}
+      </div>
+    {% endif %}
 
 
       <!-- PRODUCT -->
