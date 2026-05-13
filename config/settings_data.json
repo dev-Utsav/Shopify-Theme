@@ -146,6 +146,13 @@
         "type": "shopify://apps/globo-product-options/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
         "disabled": false,
         "settings": {}
+      },
+      "8985949203840328843": {
+        "type": "shopify://apps/products-qa-ai/blocks/chatbot/019e1ffe-5451-7e9b-b34c-f240260f0bb9",
+        "disabled": false,
+        "settings": {
+          "color": "#000000"
+        }
       }
     },
     "color_schemes": {
